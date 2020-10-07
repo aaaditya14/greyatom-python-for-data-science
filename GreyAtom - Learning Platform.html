@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<!-- saved from url=(0226)https://ga.greyatom.com/fs/learn/programs/python-for-data-science/sprints/57a78ccc-009a-4eeb-8480-a3252a2e94cd/concepts/python-getting-started/projects/student-management-system-18-03/tasks/20f76dd7-9b89-4a66-ba50-c72efb16fefc -->
+<html lang="en" style="box-sizing:border-box"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><script async="" src="./GreyAtom - Learning Platform_files/ADGMOT35CHFLVDHBJNIG50K96AN13DQ6TMKVKJ83AQURSFK54NSG.js.download"></script><script async="" src="./GreyAtom - Learning Platform_files/ADGMOT35CHFLVDHBJNIG50K96AN13DQ6TMKVKJ83AQURSFK54NSG.js.download"></script><script type="text/javascript" async="" src="./GreyAtom - Learning Platform_files/analytics.js.download"></script><script async="" src="./GreyAtom - Learning Platform_files/smartech_v3.0.js.download" id="smartech_v3"></script><script async="" src="./GreyAtom - Learning Platform_files/analytics.js.download"></script><script>!function(t,h,e,j,s,n){t.hj=t.hj||function(){(t.hj.q=t.hj.q||[]).push(arguments)},t._hjSettings={hjid:1303806,hjsv:6},s=h.getElementsByTagName("head")[0],(n=h.createElement("script")).async=1,n.src="https://static.hotjar.com/c/hotjar-"+t._hjSettings.hjid+".js?sv="+t._hjSettings.hjsv,s.appendChild(n)}(window,document)</script><script async="" src="./GreyAtom - Learning Platform_files/hotjar-1303806.js.download"></script><link rel="manifest" href="https://ga.greyatom.com/manifest.json"><link rel="shortcut icon" href="https://ga.greyatom.com/favicon.ico?v=1"><style>.wrapper{display:flex;height:100vh;flex-direction:column;justify-content:center}.wrapper-content{align-self:center}.h-percent-100{height:100%}.flex-full{flex:1 1}.container{width:35px;height:35px;border-radius:50%;position:relative;padding:6px;box-sizing:content-box}.outer-circle{height:45px;position:absolute;width:45px;padding:0;border:3px solid #1d16f4;border-radius:50%;animation:rotate 1.5s infinite linear;left:0;top:-10px;box-sizing:content-box}.outer-circle:before{background:#fafafa;content:"";width:9px;height:12px;left:37px;top:2px;position:absolute;z-index:1;border-right-color:#fafafa;transform:rotate(-40deg)}.middle-circle{height:29px;width:29px;padding:0;border:3px solid #1d16f4;border-radius:50%;animation:rotate 1.5s infinite linear;position:absolute;left:8px;top:-2px;box-sizing:content-box}.middle-circle:before{background:#fafafa;content:"";width:6px;height:8px;left:12px;top:26px;position:absolute;z-index:1;border-right:5px;border-right-color:#fafafa;transform:rotate(90deg)}.inner-circle{height:12px;width:12px;padding:0;border:3px solid #1d16f4;border-radius:50%;animation:rotate 1.5s infinite linear;position:absolute;left:17px;top:6px;box-sizing:content-box}.inner-circle:before{background:#fafafa;content:"";width:4px;height:4px;left:-2px;top:0;position:absolute;z-index:1;border-right:5px;border-right-color:#fafafa;transform:rotate(126deg)}.loading-contents{color:#444;text-align:center}.AppFactoryLoader{box-sizing:content-box}@keyframes rotate{100%{-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)}}body{background-color:#fafafa}@media screen and (max-width:1023px) and (orientation:landscape){body{background-color:#fff!important}}@media screen and (max-width:767px) and (orientation:portrait){body{background-color:#fff!important}}</style><script type="text/javascript">!function(e,a,t,n,c,g,o){e.GoogleAnalyticsObject=c,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(t),o=a.getElementsByTagName(t)[0],g.async=1,g.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document,"script",0,"ga"),ga("create","","auto")</script><script type="text/javascript" src="./GreyAtom - Learning Platform_files/smartechclient.js.download"></script><script type="text/javascript">"undefined"!=typeof smartech&&(smartech("create","ADGMOT35CHFLVDHBJNIG50K96AN13DQ6TMKVKJ83AQURSFK54NSG"),smartech("register","24a7f20dbd9104b167e1ad20cbab4652"),smartech("dispatch",1,{}))</script><script type="text/javascript" src="./GreyAtom - Learning Platform_files/loader.js.download"></script><script type="text/javascript">require.config({paths:{vs:"https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.16.2/min/vs"}});var uriData="     self.MonacoEnvironment = { baseUrl: 'https://cdnjs.cloudflare.com/ajax/libsmonaco-editor/0.16.2/min/vs'};     importScripts('https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.16.2/min/vs/base/worker/workerMain.js');   ";function initMonacoEditor(t,n,a){require(["vs/editor/editor.main"],function(){var o=monaco.editor.create(t,n);o.updateOptions({autoIndent:!0,formatOnPaste:!0,formatOnType:!0}),a(o)})}window.MonacoEnvironment={getWorkerUrl:function(o,t){return"data:text/javascript;charset=utf-8,"+encodeURIComponent(uriData)}}</script><script async="" src="./GreyAtom - Learning Platform_files/js"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-162889265-1")</script><title>GreyAtom - Learning Platform</title><link href="./GreyAtom - Learning Platform_files/21.ac72a09b.chunk.css" rel="stylesheet"><link href="./GreyAtom - Learning Platform_files/main.f808d7fb.chunk.css" rel="stylesheet"><style data-styled-components=""></style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: bolder;
+}
+body {
+  color: inherit;
+  margin: 0;
+  font-size: 14;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #fafafa;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiButton">
+.MuiButton-root {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 6px 16px;
+  font-size: 14px;
+  min-width: auto;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.MuiButton-root:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-root:hover.Mui-disabled {
+  background-color: transparent;
+}
+.MuiButton-label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.MuiButton-text {
+  padding: 6px 8px;
+}
+.MuiButton-textPrimary {
+  color: #1335e2;
+}
+.MuiButton-textPrimary:hover {
+  background-color: rgba(19, 53, 226, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-textPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-textSecondary {
+  color: #388e3c;
+}
+.MuiButton-textSecondary:hover {
+  background-color: rgba(56, 142, 60, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-textSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 5px 15px;
+}
+.MuiButton-outlined.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+.MuiButton-outlinedPrimary {
+  color: #1335e2;
+  border: 1px solid rgba(19, 53, 226, 0.5);
+}
+.MuiButton-outlinedPrimary:hover {
+  border: 1px solid #1335e2;
+  background-color: rgba(19, 53, 226, 0.08);
+}
+@media (hover: none) {
+  .MuiButton-outlinedPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-outlinedSecondary {
+  color: #388e3c;
+  border: 1px solid rgba(56, 142, 60, 0.5);
+}
+.MuiButton-outlinedSecondary:hover {
+  border: 1px solid #388e3c;
+  background-color: rgba(56, 142, 60, 0.08);
+}
+.MuiButton-outlinedSecondary.Mui-disabled {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .MuiButton-outlinedSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-contained {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  background-color: #e0e0e0;
+}
+.MuiButton-contained:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+  background-color: #d5d5d5;
+}
+.MuiButton-contained.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiButton-contained:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiButton-contained.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+@media (hover: none) {
+  .MuiButton-contained:hover {
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+    background-color: #e0e0e0;
+  }
+}
+.MuiButton-contained:hover.Mui-disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #1335e2;
+}
+.MuiButton-containedPrimary:hover {
+  background-color: #1d2480;
+}
+@media (hover: none) {
+  .MuiButton-containedPrimary:hover {
+    background-color: #1335e2;
+  }
+}
+.MuiButton-containedSecondary {
+  color: #fff;
+  background-color: #388e3c;
+}
+.MuiButton-containedSecondary:hover {
+  background-color: #1b5e20;
+}
+@media (hover: none) {
+  .MuiButton-containedSecondary:hover {
+    background-color: #388e3c;
+  }
+}
+.MuiButton-disableElevation {
+  box-shadow: none;
+}
+.MuiButton-disableElevation:hover {
+  box-shadow: none;
+}
+.MuiButton-disableElevation.Mui-focusVisible {
+  box-shadow: none;
+}
+.MuiButton-disableElevation:active {
+  box-shadow: none;
+}
+.MuiButton-disableElevation.Mui-disabled {
+  box-shadow: none;
+}
+.MuiButton-colorInherit {
+  color: inherit;
+  border-color: currentColor;
+}
+.MuiButton-textSizeSmall {
+  padding: 4px 5px;
+  font-size: 0.8125rem;
+}
+.MuiButton-textSizeLarge {
+  padding: 8px 11px;
+  font-size: 0.9375rem;
+}
+.MuiButton-outlinedSizeSmall {
+  padding: 3px 9px;
+  font-size: 0.8125rem;
+}
+.MuiButton-outlinedSizeLarge {
+  padding: 7px 21px;
+  font-size: 0.9375rem;
+}
+.MuiButton-containedSizeSmall {
+  padding: 4px 10px;
+  font-size: 0.8125rem;
+}
+.MuiButton-containedSizeLarge {
+  padding: 8px 22px;
+  font-size: 0.9375rem;
+}
+.MuiButton-sizeSmall {
+  min-width: auto;
+}
+.MuiButton-fullWidth {
+  width: 100%;
+}
+.MuiButton-startIcon {
+  display: inherit;
+  margin-left: -4px;
+  margin-right: 8px;
+}
+.MuiButton-startIcon.MuiButton-iconSizeSmall {
+  margin-left: -2px;
+}
+.MuiButton-endIcon {
+  display: inherit;
+  margin-left: 8px;
+  margin-right: -4px;
+}
+.MuiButton-endIcon.MuiButton-iconSizeSmall {
+  margin-right: -2px;
+}
+.MuiButton-iconSizeSmall > *:first-child {
+  font-size: 18px;
+}
+.MuiButton-iconSizeMedium > *:first-child {
+  font-size: 20px;
+}
+.MuiButton-iconSizeLarge > *:first-child {
+  font-size: 22px;
+}
+</style><style data-jss="" data-meta="MuiPaper">
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="makeStyles">
+
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiIconButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary {
+  color: #1335e2;
+}
+.MuiIconButton-colorPrimary:hover {
+  background-color: rgba(19, 53, 226, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary {
+  color: #388e3c;
+}
+.MuiIconButton-colorSecondary:hover {
+  background-color: rgba(56, 142, 60, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall {
+  padding: 3px;
+  font-size: 1.125rem;
+}
+.MuiIconButton-label {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiIcon">
+.MuiIcon-root {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  font-size: 16px;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiIcon-colorPrimary {
+  color: #1335e2;
+}
+.MuiIcon-colorSecondary {
+  color: #388e3c;
+}
+.MuiIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiIcon-colorError {
+  color: #f44336;
+}
+.MuiIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiIcon-fontSizeLarge {
+  font-size: 2.25rem;
+}
+</style><style data-jss="" data-meta="MuiTooltip">
+.MuiTooltip-popper {
+  flip: false;
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  flip: false;
+  left: 0;
+  width: 2em;
+  height: 1em;
+  margin-top: -0.95em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  flip: false;
+  left: 0;
+  width: 2em;
+  bottom: 0;
+  height: 1em;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.95em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  flip: false;
+  left: 0;
+  width: 1em;
+  height: 2em;
+  margin-top: 4px;
+  margin-left: -0.95em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  flip: false;
+  right: 0;
+  width: 1em;
+  height: 2em;
+  margin-top: 4px;
+  margin-right: -0.95em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: transparent transparent transparent currentcolor;
+  border-width: 1em 0 1em 1em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: transparent currentcolor transparent transparent;
+  border-width: 1em 1em 1em 0;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: currentcolor transparent transparent transparent;
+  border-width: 1em 1em 0 1em;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  flip: false;
+  border-color: transparent transparent currentcolor transparent;
+  border-width: 0 1em 1em 1em;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  position: absolute;
+  font-size: 6px;
+}
+.MuiTooltip-arrow::before {
+  width: 0;
+  height: 0;
+  margin: auto;
+  content: "";
+  display: block;
+  border-style: solid;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss152 {
+  pointer-events: none;
+}
+.jss153 {
+  min-width: 160px;
+  pointer-events: auto;
+}
+.jss154 {
+  background-color: transparent;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss101 {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.jss102 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss147 {
+  margin: 30px;
+}
+.jss148 {
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  max-width: 500px;
+  min-width: 250px;
+}
+.jss149 {
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  transform: rotate(45deg);
+  border-top: 1px solid transparent;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+.jss150 {
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  transform: rotate(45deg);
+  border-top: 1px solid #ddd;
+  border-left: 1px solid transparent;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid transparent;
+  background-color: #fff;
+}
+.jss151 {
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  transform: rotate(45deg);
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background-color: #fff;
+}
+</style><style data-jss="" data-meta="MuiChip">
+.MuiChip-root {
+  color: rgba(0, 0, 0, 0.87);
+  border: none;
+  cursor: default;
+  height: 32px;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  align-items: center;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  white-space: nowrap;
+  border-radius: 16px;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #e0e0e0;
+}
+.MuiChip-root.Mui-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.MuiChip-root .MuiChip-avatar {
+  color: #616161;
+  width: 24px;
+  height: 24px;
+  font-size: 0.75rem;
+  margin-left: 5px;
+  margin-right: -6px;
+}
+.MuiChip-root .MuiChip-avatarColorPrimary {
+  color: #fff;
+  background-color: #1d2480;
+}
+.MuiChip-root .MuiChip-avatarColorSecondary {
+  color: #fff;
+  background-color: #1b5e20;
+}
+.MuiChip-root .MuiChip-avatarSmall {
+  width: 18px;
+  height: 18px;
+  font-size: 0.625rem;
+  margin-left: 4px;
+  margin-right: -4px;
+}
+.MuiChip-sizeSmall {
+  height: 24px;
+}
+.MuiChip-colorPrimary {
+  color: #fff;
+  background-color: #1335e2;
+}
+.MuiChip-colorSecondary {
+  color: #fff;
+  background-color: #388e3c;
+}
+.MuiChip-clickable {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiChip-clickable:hover, .MuiChip-clickable:focus {
+  background-color: rgb(206, 206, 206);
+}
+.MuiChip-clickable:active {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiChip-clickableColorPrimary:hover, .MuiChip-clickableColorPrimary:focus {
+  background-color: rgb(37, 69, 228);
+}
+.MuiChip-clickableColorSecondary:hover, .MuiChip-clickableColorSecondary:focus {
+  background-color: rgb(71, 151, 75);
+}
+.MuiChip-deletable:focus {
+  background-color: rgb(206, 206, 206);
+}
+.MuiChip-deletableColorPrimary:focus {
+  background-color: rgb(66, 93, 231);
+}
+.MuiChip-deletableColorSecondary:focus {
+  background-color: rgb(95, 164, 99);
+}
+.MuiChip-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  background-color: transparent;
+}
+.MuiChip-clickable.MuiChip-outlined:hover, .MuiChip-clickable.MuiChip-outlined:focus, .MuiChip-deletable.MuiChip-outlined:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiChip-outlined .MuiChip-avatar {
+  margin-left: 4px;
+}
+.MuiChip-outlined .MuiChip-avatarSmall {
+  margin-left: 2px;
+}
+.MuiChip-outlined .MuiChip-icon {
+  margin-left: 4px;
+}
+.MuiChip-outlined .MuiChip-iconSmall {
+  margin-left: 2px;
+}
+.MuiChip-outlined .MuiChip-deleteIcon {
+  margin-right: 5px;
+}
+.MuiChip-outlined .MuiChip-deleteIconSmall {
+  margin-right: 3px;
+}
+.MuiChip-outlinedPrimary {
+  color: #1335e2;
+  border: 1px solid #1335e2;
+}
+.MuiChip-clickable.MuiChip-outlinedPrimary:hover, .MuiChip-clickable.MuiChip-outlinedPrimary:focus, .MuiChip-deletable.MuiChip-outlinedPrimary:focus {
+  background-color: rgba(19, 53, 226, 0.08);
+}
+.MuiChip-outlinedSecondary {
+  color: #388e3c;
+  border: 1px solid #388e3c;
+}
+.MuiChip-clickable.MuiChip-outlinedSecondary:hover, .MuiChip-clickable.MuiChip-outlinedSecondary:focus, .MuiChip-deletable.MuiChip-outlinedSecondary:focus {
+  background-color: rgba(56, 142, 60, 0.08);
+}
+.MuiChip-icon {
+  color: #616161;
+  margin-left: 5px;
+  margin-right: -6px;
+}
+.MuiChip-iconSmall {
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  margin-right: -4px;
+}
+.MuiChip-iconColorPrimary {
+  color: inherit;
+}
+.MuiChip-iconColorSecondary {
+  color: inherit;
+}
+.MuiChip-label {
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-overflow: ellipsis;
+}
+.MuiChip-labelSmall {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.MuiChip-deleteIcon {
+  color: rgba(0, 0, 0, 0.26);
+  width: 22px;
+  cursor: pointer;
+  height: 22px;
+  margin: 0 5px 0 -6px;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiChip-deleteIcon:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+.MuiChip-deleteIconSmall {
+  width: 16px;
+  height: 16px;
+  margin-left: -4px;
+  margin-right: 4px;
+}
+.MuiChip-deleteIconColorPrimary {
+  color: rgba(255, 255, 255, 0.7);
+}
+.MuiChip-deleteIconColorPrimary:hover, .MuiChip-deleteIconColorPrimary:active {
+  color: #fff;
+}
+.MuiChip-deleteIconColorSecondary {
+  color: rgba(255, 255, 255, 0.7);
+}
+.MuiChip-deleteIconColorSecondary:hover, .MuiChip-deleteIconColorSecondary:active {
+  color: #fff;
+}
+.MuiChip-deleteIconOutlinedColorPrimary {
+  color: rgba(19, 53, 226, 0.7);
+}
+.MuiChip-deleteIconOutlinedColorPrimary:hover, .MuiChip-deleteIconOutlinedColorPrimary:active {
+  color: #1335e2;
+}
+.MuiChip-deleteIconOutlinedColorSecondary {
+  color: rgba(56, 142, 60, 0.7);
+}
+.MuiChip-deleteIconOutlinedColorSecondary:hover, .MuiChip-deleteIconOutlinedColorSecondary:active {
+  color: #388e3c;
+}
+</style><style data-jss="" data-meta="MuiToolbar">
+.MuiToolbar-root {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .MuiToolbar-root {
+    min-height: 56px;
+  }
+}
+.MuiToolbar-gutters {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .MuiToolbar-gutters {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.MuiToolbar-regular {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .MuiToolbar-regular {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .MuiToolbar-regular {
+    min-height: 64px;
+  }
+}
+@media (min-width: 600px) {
+  .MuiToolbar-regular {
+    min-height: 56px;
+  }
+}
+.MuiToolbar-dense {
+  min-height: 48px;
+}
+</style><style data-jss="" data-meta="MuiTab">
+.MuiTab-root {
+  padding: 6px 12px;
+  overflow: hidden;
+  position: relative;
+  font-size: 14px;
+  max-width: 264px;
+  min-width: 72px;
+  box-sizing: border-box;
+  min-height: 48px;
+  text-align: center;
+  flex-shrink: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  white-space: normal;
+  text-transform: uppercase;
+}
+@media (min-width:600px) {
+  .MuiTab-root {
+    font-size: 0.8125rem;
+    min-width: 160px;
+  }
+}
+@media (min-width: 960px) {
+  .MuiTab-root {
+    min-width: auto;
+  }
+}
+.MuiTab-labelIcon {
+  min-height: 72px;
+  padding-top: 9px;
+}
+.MuiTab-labelIcon .MuiTab-wrapper > *:first-child {
+  margin-bottom: 6px;
+}
+.MuiTab-textColorInherit {
+  color: inherit;
+  opacity: 0.7;
+}
+.MuiTab-textColorInherit.Mui-selected {
+  opacity: 1;
+}
+.MuiTab-textColorInherit.Mui-disabled {
+  opacity: 0.5;
+}
+.MuiTab-textColorPrimary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTab-textColorPrimary.Mui-selected {
+  color: #1335e2;
+}
+.MuiTab-textColorPrimary.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+.MuiTab-textColorSecondary {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTab-textColorSecondary.Mui-selected {
+  color: #388e3c;
+}
+.MuiTab-textColorSecondary.Mui-disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+.MuiTab-fullWidth {
+  flex-grow: 1;
+  max-width: none;
+  flex-basis: 0;
+  flex-shrink: 1;
+}
+.MuiTab-wrapped {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.MuiTab-wrapper {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+</style><style data-jss="" data-meta="PrivateTabIndicator">
+.jss258 {
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.jss259 {
+  background-color: #1335e2;
+}
+.jss260 {
+  background-color: #388e3c;
+}
+.jss261 {
+  right: 0;
+  width: 2px;
+  height: 100%;
+}
+</style><style data-jss="" data-meta="MuiTabs">
+.MuiTabs-root {
+  display: flex;
+  overflow: hidden;
+  min-height: 48px;
+  -webkit-overflow-scrolling: touch;
+}
+.MuiTabs-vertical {
+  flex-direction: column;
+}
+.MuiTabs-flexContainer {
+  display: flex;
+}
+.MuiTabs-flexContainerVertical {
+  flex-direction: column;
+}
+.MuiTabs-centered {
+  justify-content: center;
+}
+.MuiTabs-scroller {
+  flex: 1 1 auto;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+}
+.MuiTabs-fixed {
+  width: 100%;
+  overflow-x: hidden;
+}
+.MuiTabs-scrollable {
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+.MuiTabs-scrollable::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width:599.95px) {
+  .MuiTabs-scrollButtonsDesktop {
+    display: none;
+  }
+}
+</style><style data-jss="" data-meta="MuiAppBar">
+.MuiAppBar-root {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.MuiAppBar-positionFixed {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+@media print {
+  .MuiAppBar-positionFixed {
+    position: absolute;
+  }
+}
+.MuiAppBar-positionAbsolute {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.MuiAppBar-positionSticky {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: sticky;
+}
+.MuiAppBar-positionStatic {
+  position: static;
+  transform: translateZ(0);
+}
+.MuiAppBar-positionRelative {
+  position: relative;
+}
+.MuiAppBar-colorDefault {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.MuiAppBar-colorPrimary {
+  color: #fff;
+  background-color: #1335e2;
+}
+.MuiAppBar-colorSecondary {
+  color: #fff;
+  background-color: #388e3c;
+}
+</style><style data-jss="" data-meta="MuiBadge">
+.MuiBadge-root {
+  display: inline-flex;
+  position: relative;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.MuiBadge-badge {
+  height: 20px;
+  display: flex;
+  padding: 0 6px;
+  z-index: 1;
+  position: absolute;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  min-width: 20px;
+  box-sizing: border-box;
+  transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  align-items: center;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  align-content: center;
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+.MuiBadge-colorPrimary {
+  color: #fff;
+  background-color: #1335e2;
+}
+.MuiBadge-colorSecondary {
+  color: #fff;
+  background-color: #388e3c;
+}
+.MuiBadge-colorError {
+  color: #fff;
+  background-color: #f44336;
+}
+.MuiBadge-dot {
+  height: 8px;
+  padding: 0;
+  min-width: 8px;
+  border-radius: 4px;
+}
+.MuiBadge-anchorOriginTopRightRectangle {
+  top: 0;
+  right: 0;
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+}
+.MuiBadge-anchorOriginTopRightRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, -50%);
+}
+.MuiBadge-anchorOriginBottomRightRectangle {
+  right: 0;
+  bottom: 0;
+  transform: scale(1) translate(50%, 50%);
+  transform-origin: 100% 100%;
+}
+.MuiBadge-anchorOriginBottomRightRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, 50%);
+}
+.MuiBadge-anchorOriginTopLeftRectangle {
+  top: 0;
+  left: 0;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+}
+.MuiBadge-anchorOriginTopLeftRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, -50%);
+}
+.MuiBadge-anchorOriginBottomLeftRectangle {
+  left: 0;
+  bottom: 0;
+  transform: scale(1) translate(-50%, 50%);
+  transform-origin: 0% 100%;
+}
+.MuiBadge-anchorOriginBottomLeftRectangle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, 50%);
+}
+.MuiBadge-anchorOriginTopRightCircle {
+  top: 14%;
+  right: 14%;
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+}
+.MuiBadge-anchorOriginTopRightCircle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, -50%);
+}
+.MuiBadge-anchorOriginBottomRightCircle {
+  right: 14%;
+  bottom: 14%;
+  transform: scale(1) translate(50%, 50%);
+  transform-origin: 100% 100%;
+}
+.MuiBadge-anchorOriginBottomRightCircle.MuiBadge-invisible {
+  transform: scale(0) translate(50%, 50%);
+}
+.MuiBadge-anchorOriginTopLeftCircle {
+  top: 14%;
+  left: 14%;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+}
+.MuiBadge-anchorOriginTopLeftCircle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, -50%);
+}
+.MuiBadge-anchorOriginBottomLeftCircle {
+  left: 14%;
+  bottom: 14%;
+  transform: scale(1) translate(-50%, 50%);
+  transform-origin: 0% 100%;
+}
+.MuiBadge-anchorOriginBottomLeftCircle.MuiBadge-invisible {
+  transform: scale(0) translate(-50%, 50%);
+}
+.MuiBadge-invisible {
+  transition: transform 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss107 {
+  color: #6a2c81;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss103 {
+  top: -2px !important;
+  left: -54px !important;
+  width: 350px;
+  z-index: 1100;
+}
+.jss104 {
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  transform: scale(1) translate(0);
+}
+.jss105 {
+  line-height: 1.4 !important;
+}
+.jss106 {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss212 {
+  background-color: #fafafa;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss79 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 56px);
+  z-index: 1099;
+  position: fixed;
+  background: #fafafa;
+  margin-top: 56px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss100 {
+  padding-left: 80px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.jss96 {
+  height: 100%;
+  position: relative;
+  padding-top: 56px;
+}
+.jss97 {
+  z-index: 1099;
+  background: #fafafa;
+}
+.jss98 {
+  padding-top: 56px;
+}
+.jss99 {
+  padding-top: 91px;
+}
+</style><style data-jss="" data-meta="App">
+
+</style><style data-jss="" data-meta="makeStyles">
+.jss142 {
+  border-color: #32c5ff!important;
+  background-color: #303346;
+}
+.jss143 {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 52px;
+  z-index: 999;
+  position: fixed;
+}
+.jss144 {
+  max-width: 180px;
+}
+.jss145 {
+  top: 56px;
+  z-index: 999;
+  position: fixed;
+  min-height: 56px;
+}
+.jss146 {
+  z-index: 2001;
+}
+</style><style data-jss="" data-meta="makeStyles">
+
+</style><style data-jss="" data-meta="makeStyles">
+.jss242 {
+  background-color: #262626;
+}
+.jss243::after {
+  top: 100%;
+  left: 16px;
+  width: 60px;
+  height: 2px;
+  margin: 0 0 5px 0;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color:  #1335e2;
+}
+.jss244 {
+  height: 40px!important;
+  min-height: unset;
+}
+.jss245 {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  background-size: 100%;
+  background-image: url(data:image/jpeg;base64,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6wdYeLeTeQj29YOsPFvJvIR7esHWHi3k3kI9vWDrDxbybyEe3rB1h4t5N5CPb1g6w8W8m8hHt6wdYeLeTeQj29YOsPFvJvIR7esHWHi3k3kI9vWDrDxbybyEe3rB1h4t5N5CPb1g6w8W8m8hHt6wdYeLeTeQj29YOsPFvJvIR7esHWHi3k3kI9vWDrDxbybyEe2PPTUeo/LwbybyhH0PmZ9z5mfd8/eTeQj6HzM+58zPu+fvJvIR9D5mfdJ9R+Xg3k3kI9s+c7PFvJvIR7e35O35eLeTeQj29vydvy8W8m8hHt7fk7fl4t5N5CPb2/J2eLeTeQj29oHi3kUjDWMsWWivRjk3vDy7LuD07wk5vPubyDrllbllKbJYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJZYKJYDFlsrANCxDUYgwOmhpIOY6aJqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwN6moMDepqDA3qagwjpqxMAliSAjWLLeIOmMOuOLni7YSDUYLz/DWOULtAOc+NicXacocspBikpSwSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywSilssEopbLBKKWywZmGMnSXPIHKQkBGoZWAdYluM3GJWJB2jyflen5coKkHSfJ+U3ZqTWQXY2ZmGQdNjZiFoGtjZmkBvY2YZmQddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgddjZy2NgdJyZylnZLBJCQEWEWAVrFhrEHXGG6hjFuAWIXWEgBnKIcpdcvs5SC4ukQ54usAkwxLcucgksS3LEgyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAChABISAiwiwCtYsLEg7Yt24Rku4O8Uv0cIzXcG8nKSc2ZkHTH7ukS88ZNbg6zLnKTkzsDUsSWkggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAAEhICLCAKAAqAKWgCoACoAqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/9k=);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.jss246 {
+  color: white;
+  background: #1335e2;
+  min-height: 40px;
+}
+.jss247 {
+  color: white;
+  background: #343434;
+  min-height: 40px;
+}
+.jss248 {
+  background: #343434;
+}
+.jss249 {
+  background: #1335e2;
+}
+.jss250 {
+  height: calc(100% - 90px);
+}
+.jss251 {
+  height: 100%;
+}
+.jss252 {
+  max-height: calc(100% - 170px);
+  overflow-y: auto;
+}
+.jss253 {
+  max-height: calc(100% - 115px);
+  overflow-y: auto;
+}
+.jss254 {
+  top: 8px;
+  right: 26px;
+  height: 60px;
+  z-index: 1;
+}
+.jss255 {
+  cursor: zoom-in;
+}
+.jss255:after {
+  top: 1px;
+  left: 1px;
+  right: 2px;
+  bottom: -1px;
+  content: ' ';
+  z-index: 1;
+  position: absolute;
+  background: rgba(0, 0,0, 0.6);
+  border-radius: 4px;
+}
+.jss256 {
+  height: 60px;
+}
+.jss257 {
+  height: 92.5%!important;
+}
+</style><style data-jss="" data-meta="makeStyles">
+
+</style><style data-jss="" data-meta="makeStyles">
+
+</style><style data-jss="" data-meta="makeStyles">
+
+</style><style data-jss="" data-meta="FullScreenOutlineComponent">
+.jss80 {
+  width: 32px!important;
+  height: 32px!important;
+}
+.jss81 {
+  background-color: #232535;
+}
+.jss82 {
+  padding-top: 56px;
+}
+.jss83 {
+  height: calc(100vh - 56px);
+  padding-bottom: 56px;
+  border-right-color: #32c5ff;
+}
+.jss84 {
+  height: 93vh;
+}
+.jss85 {
+  top: 62px;
+  width: 28px;
+  height: 28px;
+  z-index: 1000;
+  background-color: #32c5ff;
+}
+.jss86 {
+  top: 68px;
+}
+.jss87 {
+  left: 1%;
+}
+.jss88 {
+  left: 31%;
+}
+.jss89 {
+  top: 50%;
+  right: 1%;
+  z-index: 999;
+  position: fixed;
+}
+.jss90 {
+  top: 50%;
+  z-index: 999;
+  position: fixed;
+}
+.jss91 {
+  right: 3%;
+  bottom: 1%;
+  z-index: 1000;
+  position: fixed;
+}
+.jss92 {
+  left: 3%;
+  bottom: 1%;
+  z-index: 1000;
+  position: fixed;
+}
+.jss93 {
+  padding: 4px 0 0 5px!important;
+}
+.jss94 {
+  width: 100%;
+}
+.jss95 {
+  padding-bottom: 52px;
+}
+</style><style data-jss="" data-meta="ConceptProjectScreen">
+.jss190 {
+  margin-bottom: 80px;
+}
+</style><style data-jss="" data-meta="OutlineScreen">
+
+</style><style data-jss="" data-meta="LearnAndTeachRouteScreen">
+
+</style><style data-jss="" data-meta="makeStyles">
+
+</style><script async="" src="./GreyAtom - Learning Platform_files/modules.0d7a047cb613393385fe.js.download" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./GreyAtom - Learning Platform_files/editor.main.css"><link rel="manifest" href="https://wdc.netcoresmartech.com/manifest.json"><script charset="utf-8" src="./GreyAtom - Learning Platform_files/0.89d1bfee.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Learning Platform_files/1.d0be7993.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Learning Platform_files/4.a998658b.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Learning Platform_files/2.23009c26.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Learning Platform_files/learnTeachOutline.02e4c79f.chunk.js.download"></script><script charset="utf-8" src="./GreyAtom - Learning Platform_files/learn.90eed936.chunk.js.download"></script><script async="async" type="text/javascript" src="./GreyAtom - Learning Platform_files/editor.main.js.download"></script><script async="async" type="text/javascript" src="./GreyAtom - Learning Platform_files/editor.main.nls.js.download"></script><style type="text/css" media="screen" class="monaco-colors">.monaco-editor .minimap-slider, .monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(121, 121, 121, 0.2); }
+.monaco-editor .minimap-slider:hover, .monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active, .monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(191, 191, 191, 0.2); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #000000 -6px 0 6px -6px inset; }
+.monaco-editor .scroll-decoration { box-shadow: #000000 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #264f78; }
+.monaco-editor .selected-text { background-color: #3a3d41; }
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #1e1e1e; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #d4d4d4; }
+.monaco-editor .margin { background-color: #1e1e1e; }
+.monaco-editor .rangeHighlight { background-color: rgba(255, 255, 255, 0.04); }
+.vs-whitespace { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #282828; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #282828; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #404040 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #707070 inset; }
+.monaco-editor .line-numbers { color: #858585; }
+.monaco-editor .current-line ~ .line-numbers { color: #c6c6c6; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #5a5a5a inset; }
+.monaco-editor .cursor { background-color: #aeafad; border-color: #aeafad; color: #515052; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23ea4646'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%234d9e4d'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23008000'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22rgba(238%2C%20238%2C%20238%2C%200.7)%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.showUnused .monaco-editor .squiggly-inline-unnecessary { opacity: 0.667; }
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #888888; }
+.monaco-diff-editor .diff-review-line-number { color: #858585; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #000000 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #000000; }
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #888888; }
+.monaco-editor .codelens-decoration { color: #999999; }
+.monaco-editor .codelens-decoration > a:hover { color: #4e94ce !important; }
+.monaco-editor .findOptionsWidget { background-color: #252526; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #515c6a; }
+.monaco-editor .findScope { background-color: rgba(58, 61, 65, 0.4); }
+.monaco-editor .find-widget { background-color: #252526; }
+.monaco-editor .find-widget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #f48771; }
+.monaco-editor .find-widget .monaco-sash { background-color: #454545; width: 3px !important; margin-left: -4px;}
+.monaco-editor .find-widget .monaco-checkbox .checkbox:checked + .label { border: 1px solid #007acc; }
+.monaco-editor .detected-link-active { color: #4e94ce !important; }
+.monaco-editor .monaco-editor-overlaymessage .anchor { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #063b49; }
+.monaco-editor .parameter-hints-widget { border: 1px solid #454545; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #252526; }
+.monaco-editor .parameter-hints-widget a { color: #3794ff; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .snippet-placeholder { background-color: rgba(124, 124, 124, 0.3); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: #525252; }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #0097fb; }
+.monaco-editor .suggest-widget { color: #d4d4d4; }
+.monaco-editor .suggest-widget a { color: #3794ff; }
+.monaco-editor .suggest-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.07); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.72); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(0, 73, 114, 0.72); }
+.monaco-editor .accessibilityHelpWidget { background-color: #252526; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px #000000; }
+.monaco-editor .tokens-inspect-widget { border: 1px solid #454545; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #454545; }
+.monaco-editor .tokens-inspect-widget { background-color: #252526; }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(255, 143, 0, 0.6); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #252526; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #bbbbbb; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #ffffff; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { color: #ffffff !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #001f33;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #001f33;}
+.monaco-editor .marker-widget a { color: #3794ff; }
+.monaco-editor .hoverHighlight { background-color: rgba(38, 79, 120, 0.25); }
+.monaco-editor .monaco-editor-hover { background-color: #252526; }
+.monaco-editor .monaco-editor-hover { border: 1px solid #454545; }
+.monaco-editor .monaco-editor-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover hr { border-bottom: 0px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-editor-hover a { color: #3794ff; }
+.monaco-editor .monaco-editor-hover .hover-row .actions { background-color: #2c2c2d; }
+.monaco-editor .monaco-editor-hover code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .goto-definition-link { color: #4e94ce !important; }
+
+.mtk1 { color: #d4d4d4; }
+.mtk2 { color: #1e1e1e; }
+.mtk3 { color: #cc6666; }
+.mtk4 { color: #9cdcfe; }
+.mtk5 { color: #ce9178; }
+.mtk6 { color: #b5cea8; }
+.mtk7 { color: #608b4e; }
+.mtk8 { color: #569cd6; }
+.mtk9 { color: #dcdcdc; }
+.mtk10 { color: #808080; }
+.mtk11 { color: #f44747; }
+.mtk12 { color: #c586c0; }
+.mtk13 { color: #a79873; }
+.mtk14 { color: #dd6a6f; }
+.mtk15 { color: #5bb498; }
+.mtk16 { color: #909090; }
+.mtk17 { color: #778899; }
+.mtk18 { color: #ff00ff; }
+.mtk19 { color: #b46695; }
+.mtk20 { color: #ff0000; }
+.mtk21 { color: #4f76ac; }
+.mtk22 { color: #3dc9b0; }
+.mtk23 { color: #74b0df; }
+.mtk24 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><style type="text/css" media="screen"></style><script async="async" type="text/javascript" src="./GreyAtom - Learning Platform_files/python.js.download"></script></head><body style="margin: 0px; font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.4; font-weight: 400; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; color: rgb(68, 68, 68); box-sizing: border-box; height: 100%; padding: 0px;"><noscript>You need to enable JavaScript to run this app.</noscript><div id="html-head-loader" style="box-sizing: border-box; width: 100%; position: absolute; top: 0px; height: 56px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 8px 0px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 3px 3px -2px; display: none;"><div style="display:flex;flex-direction:row;padding:10px"><div style="margin-left:8px;flex:1"><svg width="217px" height="32px" viewBox="0 0 217 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CL/Nav-Header/Loader" transform="translate(-22.000000, -12.000000)" fill="#ECECEC" fill-rule="nonzero"><g id="Nav-Header"><g id="Group" transform="translate(22.000000, 12.000000)"><rect id="Rectangle-2" x="50" y="12" width="167" height="8" rx="4"></rect><circle id="Oval" cx="16" cy="16" r="16"></circle></g></g></g></g></svg></div><div style="margin-right:19px"><svg width="152px" height="32px" viewBox="0 0 152 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="CL/Nav-Header/Loader" transform="translate(-1203.000000, -12.000000)" fill="#ECECEC" fill-rule="nonzero"><g id="Nav-Header"><g id="Group-2" transform="translate(1203.000000, 12.000000)"><circle id="Oval" cx="96" cy="16" r="16"></circle><circle id="Oval-Copy-2" cx="56" cy="16" r="16"></circle><circle id="Oval-Copy-3" cx="16" cy="16" r="16"></circle><circle id="Oval-Copy" cx="136" cy="16" r="16"></circle></g></g></g></g></svg></div></div></div><div id="root" class="h-percent-100"><div class="Toastify"><div class="Toastify__toast-container Toastify__toast-container--top-right" style="pointer-events: none;"></div></div><div class="Toastify"></div><div class="flex-full"><div class="h-percent-100"><div class=""><div><div><header class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed  br-b-xs MuiAppBar-colorDefault mui-fixed MuiPaper-elevation0" id="mainHeader" style=""><div class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"><div class="flex-full flex-hbox"><div class="flex-hbox flex-cross-center flex-full"><div class="flex-hbox cursor-pointer flex-cross-center   br-r-xs pd-r-sm mr-r-sm"><div class="pd-r-sm"><div class="overflow-hidden position-relative avatar-square-sm br-radius-circle    "><img class="jss101" src="./GreyAtom - Learning Platform_files/file.png" alt="GreyAtom"></div></div><div class="font-bold text-black">GreyAtom</div></div><a id="programName" href="https://ga.greyatom.com/learn/programs/python-for-data-science?trk_source=CTE_ACTION_FULLSCREEN_OUTLINE_BACK">Python For Data Science</a></div><div class="flex-hbox flex-cross-center"><div class="flex-cross-center flex-hbox font-bold mr-l-auto mr-r-lg text-success"><button class="MuiButtonBase-root MuiButton-root MuiButton-text bg-success text-white MuiButton-textSizeSmall MuiButton-sizeSmall" tabindex="0" type="button"><span class="MuiButton-label"><span class="fa-stack fa-xs"><i class="fa fa-certificate fa-stack-2x text-white"></i><i class="fa fa-exclamation text-success  fa-stack-1x"></i></span><span class="mr-l-sm">Get Certificate</span></span><span class="MuiTouchRipple-root"></span></button></div><div class="mr-r-sm br-radius-lg bg-mercury pd-tb-xs pd-lr-sm" title="Overall program points"><span class="fal fa-trophy-alt text-primary mr-r-sm"></span><span class="text-primary font-caption "><div style="display: inline-flex; transform: none;">5729</div></span></div><div class="mr-r-sm"><div class="cursor-pointer"><span class="MuiBadge-root"><div><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" title="Notifications"><span class="MuiIconButton-label"><span class="material-icons MuiIcon-root" aria-hidden="true"><i class="fal fa-bell undefined"></i></span></span><span class="MuiTouchRipple-root"></span></button></div><span class="MuiBadge-badge jss104 display-none MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible">0</span></span></div></div><div id="userProfile" class="position-relative display-inline-block cursor-pointer"><div class="flex-hbox flex-cross-center"><div class="overflow-hidden position-relative avatar-square-sm br-radius-circle   bg-blue flex-vbox flex-main-center flex-cross-center "><div class="">AT</div></div></div></div></div></div></div></header><div class="jss96 jss98"><div class="h-percent-100"><div><div class="w-percent-100 flex-full bg-white jss84 scroll-v-auto position-relative false jss82"><div class="jss85 position-fixed  br-radius-tr-sm br-radius-br-sm cursor-pointer false jss86" id="outlineButton"><i class="fal fa-list text-white pd-xs" aria-hidden="true" style="font-size: 18px;"></i></div><div class="jss90 cursor-pointer jss87"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="font-display1"><i class="fal fa-arrow-circle-left  text-skyblue"></i></span></span><span class="MuiTouchRipple-root"></span></button></div><div class="jss89 cursor-pointer"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button"><span class="MuiIconButton-label"><span class="font-display1"><i class="fal fa-arrow-circle-right  text-skyblue"></i></span></span><span class="MuiTouchRipple-root"></span></button></div><div><div class="jss142 pd-tb-sm pd-lr-xl jss145  w-percent-100 br-b-md flex-hbox flex-cross-center flex-main-space-between flex-nowrap"><div class="text-white"><div class="flex-hbox flex-cross-center flex-nowrap"><span>2.1.1</span><span class="text-white false font-subheading pd-l-sm">Student Management System</span></div></div><div><div class="flex-hbox flex-cross-center"><div><div class="mr-r-md undefined"><div class="flex-hbox mr-l-md"><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined text-white br-xs br-white MuiButton-outlinedPrimary" tabindex="0" type="button"><span class="MuiButton-label"><span><span class="pd-r-sm"><i class="fab fa-github"></i></span>Publish to Github</span></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div><div class="flex-hbox flex-main-center flex-cross-center bg-white br-radius-lg br-xs pd-l-sm"><span class="text-success fal fa-trophy-alt mr-r-xs pd-tb-xs"></span><span class="text-success font-caption pd-r-sm"><div style="display: inline-flex; transform: none;">0</div></span><div><div><div class="cursor-pointer bg-selected br-radius-tr-lg br-radius-br-lg" style="padding: 2px 4px;"><span class="fas fa-info-circle text-success"></span></div></div></div></div></div></div></div></div><div class="position-fixed h-percent-100 w-percent-100"><div class="SplitPane jss257 vertical " style="display: flex; flex: 1 1 0%; height: 100%; position: absolute; outline: none; overflow: hidden; user-select: text; flex-direction: row; left: 0px; right: 0px;"><div class="Pane vertical Pane1  " style="flex: 0 0 auto; position: relative; outline: none; width: 614.4px;"><div><div class="MuiTabs-root jss244 bg-selected pd-lr-md paper-elevation-2 "><div class="MuiTabs-scroller MuiTabs-fixed" style="overflow: hidden;"><div class="MuiTabs-flexContainer" role="tablist"><button class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary jss244 Mui-selected" tabindex="0" type="button" role="tab" aria-selected="true" id="TASK"><span class="MuiTab-wrapper">TASK</span><span class="MuiTouchRipple-root"></span></button></div><span class="jss258 jss259 MuiTabs-indicator" style="left: 0px; width: 51.6375px;"></span></div></div><div class="mxh-vh-80 pd-b-xl scroll-v-auto" id="taskContentHolder"><div class="pd-lr-lg pd-b-lg"><div class="font-title pd-t-md">Task</div><div class="pd-t-sm pd-b-lg title"><div class="mde-preview"><div class="mde-preview-content" style="font-size: 15px;"><h2 id="instructions">Instructions:</h2>
+<p><strong>Step 1</strong>: Let's create a new register by combining data from two classes while making some modifications to the register.</p>
+<ul>
+<li><p>Create a <code>'class_1'</code> list and pass the elements <code>'Geoffrey Hinton'</code>,<code>'Andrew Ng'</code>,<code>'Sebastian Raschka'</code>,<code>'Yoshua Bengio'</code>.</p></li>
+<li><p>Create a <code>'class_2'</code> list and pass the elements <code>'Hilary Mason'</code>,<code>'Carla Gentry'</code>,<code>'Corinna Cortes'</code>.</p></li>
+<li><p>Concatenate the <code>'class_1'</code> and <code>'class_2'</code> list. Store the values in a<code>'new_class'</code> variable.</p></li>
+<li><p>Print the <code>'new_class'</code> variable  to see the new list.</p></li>
+</ul>
+<p>You can now see the students list. </p>
+<p>Oops! Looks like we might have missed a student whose name is <code>Peter Warden</code>. Let's add him in the new register. </p>
+<ul>
+<li><p>Add new element <code>'Peter Warden'</code> in the <code>'new_class'</code> list. </p></li>
+<li><p>Print <code>'new_class'</code> to see the updated list.</p></li>
+</ul>
+<p>It seems like there could also be a wrong entry in the list whose name is <code>Carla Gentry</code>. Let's remove her from the register.</p>
+<ul>
+<li><p>Remove the <code>'Carla Gentry'</code>element from the <code>'new_class'</code> list. </p></li>
+<li><p>Print <code>'new_class'</code> to see the updated list.</p></li>
+</ul>
+<hr>
+<p><code>new_class</code> should have <code>['Geoffrey Hinton', 'Andrew Ng', 'Sebastian Raschka', 'Yoshua Bengio', 'Hilary Mason', 'Corinna Cortes', 'Peter Warden']</code></p>
+<hr>
+<p><br>
+<strong>Step 2:</strong> Let's create a dictionary for <code>Geoffrey Hinton</code> in each subject to generate his progress report. </p>
+<ul>
+<li>Create a dictionary named <code>'courses'</code> using the keys and values given below</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>course</th>
+<th>marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Math</td>
+<td>65</td>
+</tr>
+<tr>
+<td>English</td>
+<td>70</td>
+</tr>
+<tr>
+<td>History</td>
+<td>80</td>
+</tr>
+<tr>
+<td>French</td>
+<td>70</td>
+</tr>
+<tr>
+<td>Science</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>See the marks obtained in each subject.</p></li>
+<li><p>Add all the marks scored out of 100 and store it in a variable named <code>'total'</code>.</p></li>
+<li><p>Print <code>'total'</code>.</p></li>
+<li><p>Calculate the <code>'percentage'</code> scored by <code>'Geoffrey Hinton'</code> where addition of all the subjects is <code>500</code>.</p></li>
+<li><p>Print the <code>'percentage'</code>.
+<br></p></li>
+</ul>
+<hr>
+<p><br>
+The created dictionary  <code>courses</code> should have <code>{'Math':65,'English':70,'History':80,'French':70,'Science':60}</code> as the keys and values.
+<br>The calculated value of <code>total</code> should be 345 and that of <code>percentage</code> should be 69.0.</p>
+<hr>
+<p><br>
+<strong>Step 3:</strong> For the student who got the highest marks in this subject, the school has decided to award a scholarship.
+Let's check who performed best in mathematics from all the students who appeared for the test. </p>
+<ul>
+<li>Create a dictionary named <code>'mathematics'</code> using the keys and values given below.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>student</th>
+<th>marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geoffrey Hinton</td>
+<td>78</td>
+</tr>
+<tr>
+<td>Andrew Ng</td>
+<td>95</td>
+</tr>
+<tr>
+<td>Sebastian Raschka</td>
+<td>65</td>
+</tr>
+<tr>
+<td>Yoshua Benjio</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Hilary Mason</td>
+<td>70</td>
+</tr>
+<tr>
+<td>Corinna Cortes</td>
+<td>66</td>
+</tr>
+<tr>
+<td>Peter Warden</td>
+<td>75</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<pre><code>Example of max function:
+</code></pre>
+<pre class="code-block"><code class="hljs python language-python"><span class="hljs-comment"># calculate the max value</span>
+
+max_marks_scored = max(courses,key = courses.get)
+<span class="hljs-keyword">print</span> (max_marks_scored)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre class="code-block"><code class="hljs python language-python">History
+</code></pre>
+<hr>
+<ul>
+<li>Find out the student with the highest marks in Mathematics and store it in a variable <code>'topper'</code>.</li>
+</ul>
+<p>The value stored in <code>topper</code> should be 'Andrew Ng'.</p>
+<hr>
+<p><strong>Step 4:</strong>  From the previous task, we know who is the 'Maths' topper in the class. You now have to print the name of the student on the certificate, but you will have to print his last name and then his first name. </p>
+<ul>
+<li><p>String name <code>'topper'</code> with the Math topper's name is given.</p></li>
+<li><p>Split the <code>'topper'</code> using the <code>"split()"</code> function and store the results in <code>'first_name'</code> and <code>'last_name'</code>.</p></li>
+</ul>
+<hr>
+<pre><code>Example of split function:
+</code></pre>
+<pre class="code-block"><code class="hljs python language-python">Quote = <span class="hljs-string">" I love data "</span>
+
+<span class="hljs-comment"># To split the words of a sentence</span>
+print(<span class="hljs-string">'-'</span>*<span class="hljs-number">20</span>)
+
+<span class="hljs-comment"># To access one word based on index</span>
+print(Quote.split()[<span class="hljs-number">2</span>])
+</code></pre>
+<p><strong>Output</strong></p>
+<pre class="code-block"><code class="hljs python language-python">[<span class="hljs-string">'I'</span>, <span class="hljs-string">'love'</span>, <span class="hljs-string">'data'</span>]
+--------------------
+data
+</code></pre>
+<hr>
+<ul>
+<li><p>Display the full name concatenating <code>+</code> the strings <code>'last_name'</code> and <code>'first_name'</code> strings. Don't forget to add a whitespace character between them to avoid displaying them together and store it in a <code>full_name</code> variable .</p></li>
+<li><p>Convert all the elements in the <code>'full_name'</code>string to uppercase, and store it to the <code>'certificate_name'</code> variable.</p></li>
+<li><p>Print <code>'certificate_name'</code>.</p></li>
+</ul>
+<hr>
+<p><br></p>
+<p><strong>Test Case:</strong> <code>certificate_name</code> is 'NG ANDREW'.</p></div></div></div><div class="mr-t-xl"><div class="mr-tb-sm"><div class="mr-tb-sm"> Skills Covered: </div><div> <div class="MuiChip-root mr-xs font-caption undefined"><span class="MuiChip-label">Data Wrangling</span></div> </div></div></div><div class="mr-t-xl"></div><div class="mr-t-xl"><div class="br-xs"><div class="flex-hbox flex-main-center flex-cross-center bg-ghost"><div class="pd-sm flex-full font-caption font-bold">Reference Solution</div><div class="flex-auto mr-lr-xs flex-hbox flex-main-center flex-cross-center pd-sm"><div class="pd-lr-sm cursor-pointer br-xs br-radius-sm bg-selected" title="Show"><i class="font-small fal fa-plus"></i></div></div></div></div></div></div></div></div></div><span class="Resizer vertical "></span><div class="Pane vertical Pane2  " style="flex: 1 1 0%; position: relative; outline: none;"><div id="codingPane" class="h-percent-100" style="padding-bottom: 40px;"><div class="bg-selected paper-elevation-2"><div class="flex-hbox flex-cross-center"><div class="flex-full pd-lr-lg"><div class="MuiTabs-root jss244"><div class="MuiTabs-scroller MuiTabs-fixed" style="overflow: hidden;"><div class="MuiTabs-flexContainer" role="tablist"><button class="MuiButtonBase-root MuiTab-root jss244 MuiTab-textColorPrimary Mui-selected" tabindex="0" type="button" role="tab" aria-selected="true"><span class="MuiTab-wrapper">Code</span><span class="MuiTouchRipple-root"></span></button></div><span class="jss258 jss259 MuiTabs-indicator" style="left: 0px; width: 53.1375px;"></span></div></div></div><div><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined flex-auto MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall" tabindex="0" type="button"><span class="MuiButton-label">RESET CODE</span><span class="MuiTouchRipple-root"></span></button></div><div class="mr-lr-lg font-caption text-body">Code Saved</div><div class="mr-r-md text-body"><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" title="Switch to Light Theme"><span class="MuiIconButton-label"><span class="fa-sm"><i class="fa fa-sun"></i></span></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div class="position-relative h-percent-100 "><div class="SplitPane  horizontal " style="display: flex; flex: 1 1 0%; height: 100%; position: absolute; outline: none; overflow: hidden; user-select: text; bottom: 0px; flex-direction: column; min-height: 100%; top: 0px; width: 100%;"><div class="Pane horizontal Pane1  " style="flex: 0 0 auto; position: relative; outline: none; height: 387.28px; display: flex;"><div id="codingPane" class="cde-dark w-percent-100 h-percent-100"><div data-keybinding-context="1" data-mode-id="python" class="showUnused" style="width: 100%; height: 100%;"><div class="monaco-editor no-user-select  vs-dark focused" data-uri="inmemory://model/10" style="width: 900px; height: 387px;"><div data-mprt="3" class="overflow-guard" style="width: 900px; height: 387px;"><div class="margin" role="presentation" aria-hidden="true" style="position: absolute; will-change: transform; top: 0px; height: 1368px; width: 64px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 1368px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays focused" role="presentation" aria-hidden="true" style="position: absolute; width: 64px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; letter-spacing: 0px; height: 1368px;"><div style="position:absolute;top:0px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">1</div></div><div style="position:absolute;top:19px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">2</div></div><div style="position:absolute;top:38px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">3</div></div><div style="position:absolute;top:57px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">4</div></div><div style="position:absolute;top:76px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">5</div></div><div style="position:absolute;top:95px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">6</div></div><div style="position:absolute;top:114px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">7</div></div><div style="position:absolute;top:133px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">8</div></div><div style="position:absolute;top:152px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">9</div></div><div style="position:absolute;top:171px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">10</div></div><div style="position:absolute;top:190px;width:100%;height:19px;"><div class="current-line" style="width:64px; height:19px;"></div><div class="line-numbers" style="left:0px;width:38px;">11</div></div><div style="position:absolute;top:209px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">12</div></div><div style="position:absolute;top:228px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">13</div></div><div style="position:absolute;top:247px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">14</div></div><div style="position:absolute;top:266px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">15</div></div><div style="position:absolute;top:285px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">16</div></div><div style="position:absolute;top:304px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">17</div></div><div style="position:absolute;top:323px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">18</div></div><div style="position:absolute;top:342px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">19</div></div><div style="position:absolute;top:361px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">20</div></div><div style="position:absolute;top:380px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">21</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 64px; width: 836px; height: 387px;"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; will-change: transform; top: 0px; left: 0px;"><div class="view-overlays focused" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 836px;"><div style="position:absolute;top:0px;width:100%;height:19px;"></div><div style="position:absolute;top:19px;width:100%;height:19px;"></div><div style="position:absolute;top:38px;width:100%;height:19px;"></div><div style="position:absolute;top:57px;width:100%;height:19px;"></div><div style="position:absolute;top:76px;width:100%;height:19px;"></div><div style="position:absolute;top:95px;width:100%;height:19px;"></div><div style="position:absolute;top:114px;width:100%;height:19px;"></div><div style="position:absolute;top:133px;width:100%;height:19px;"></div><div style="position:absolute;top:152px;width:100%;height:19px;"></div><div style="position:absolute;top:171px;width:100%;height:19px;"></div><div style="position:absolute;top:190px;width:100%;height:19px;"><div class="current-line" style="width:836px; height:19px;"></div></div><div style="position:absolute;top:209px;width:100%;height:19px;"></div><div style="position:absolute;top:228px;width:100%;height:19px;"></div><div style="position:absolute;top:247px;width:100%;height:19px;"></div><div style="position:absolute;top:266px;width:100%;height:19px;"></div><div style="position:absolute;top:285px;width:100%;height:19px;"></div><div style="position:absolute;top:304px;width:100%;height:19px;"></div><div style="position:absolute;top:323px;width:100%;height:19px;"></div><div style="position:absolute;top:342px;width:100%;height:19px;"></div><div style="position:absolute;top:361px;width:100%;height:19px;"></div><div style="position:absolute;top:380px;width:100%;height:19px;"></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; letter-spacing: 0px; width: 836px; height: 1368px;"><div style="top:0px;height:19px;" class="view-line"><span><span class="mtk7">#&nbsp;Code&nbsp;starts&nbsp;here</span></span></div><div style="top:19px;height:19px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:38px;height:19px;" class="view-line"><span><span class="mtk7">#&nbsp;Create&nbsp;the&nbsp;lists&nbsp;</span></span></div><div style="top:57px;height:19px;" class="view-line"><span><span class="mtk1">class_1&nbsp;=&nbsp;</span><span class="mtk9">[</span><span class="mtk5">'Geoffrey&nbsp;Hinton'</span><span class="mtk9">,</span><span class="mtk5">'Andrew&nbsp;Ng'</span><span class="mtk9">,</span><span class="mtk5">'Sebastian&nbsp;Raschka'</span><span class="mtk9">,</span><span class="mtk5">'Yoshua&nbsp;Bengio'</span><span class="mtk9">]</span></span></div><div style="top:76px;height:19px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:95px;height:19px;" class="view-line"><span><span class="mtk1">class_2&nbsp;=&nbsp;</span><span class="mtk9">[</span><span class="mtk5">'Hilary&nbsp;Mason'</span><span class="mtk9">,</span><span class="mtk5">'Carla&nbsp;Gentry'</span><span class="mtk9">,</span><span class="mtk5">'Corinna&nbsp;Cortes'</span><span class="mtk9">]</span></span></div><div style="top:114px;height:19px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:133px;height:19px;" class="view-line"><span><span class="mtk7">#&nbsp;Concatenate&nbsp;both&nbsp;the&nbsp;strings</span></span></div><div style="top:152px;height:19px;" class="view-line"><span><span class="mtk1">new_class&nbsp;=&nbsp;class_1&nbsp;+&nbsp;class_2</span></span></div><div style="top:171px;height:19px;" class="view-line"><span><span class="mtk8">print</span><span class="mtk9">(</span><span class="mtk1">new_class</span><span class="mtk9">)</span></span></div><div style="top:190px;height:19px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:209px;height:19px;" class="view-line"><span><span class="mtk7">#&nbsp;Append&nbsp;the&nbsp;list</span></span></div><div style="top:228px;height:19px;" class="view-line"><span><span class="mtk1">new_class.append</span><span class="mtk9">(</span><span class="mtk5">'Peter&nbsp;Warden'</span><span class="mtk9">)</span></span></div><div style="top:247px;height:19px;" class="view-line"><span><span class="mtk7">#&nbsp;Print&nbsp;updated&nbsp;list</span></span></div><div style="top:266px;height:19px;" class="view-line"><span><span class="mtk8">print</span><span class="mtk9">(</span><span class="mtk1">new_class</span><span class="mtk9">)</span></span></div><div style="top:285px;height:19px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:304px;height:19px;" class="view-line"><span><span class="mtk7">#&nbsp;Remove&nbsp;the&nbsp;element&nbsp;from&nbsp;the&nbsp;list</span></span></div><div style="top:323px;height:19px;" class="view-line"><span><span class="mtk1">new_class.remove</span><span class="mtk9">(</span><span class="mtk5">'Carla&nbsp;Gentry'</span><span class="mtk9">)</span></span></div><div style="top:342px;height:19px;" class="view-line"><span><span class="mtk7">#&nbsp;Print&nbsp;the&nbsp;list</span></span></div><div style="top:361px;height:19px;" class="view-line"><span><span>&nbsp;</span></span></div><div style="top:380px;height:19px;" class="view-line"><span><span class="mtk8">print</span><span class="mtk9">(</span><span class="mtk1">new_class</span><span class="mtk9">)</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"><div class="lightbulb-glyph" title="Show Fixes (Ctrl+.)" widgetid="LightBulbWidget" style="position: absolute; visibility: hidden; max-width: 836px;"></div></div><div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid"><div class="cursor " style="height: 19px; top: 190px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px; letter-spacing: 0px; display: block; visibility: inherit; width: 1.6px;"></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 822px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform; width: 822px;"></div></div><canvas class="decorationsOverviewRuler" aria-hidden="true" width="17" height="483" style="position: absolute; will-change: transform; top: 0px; right: 0px; width: 14px; height: 387px;"></canvas><div role="presentation" aria-hidden="true" class="visible scrollbar vertical" style="position: absolute; width: 14px; height: 387px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; will-change: transform; height: 109px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 900px;"></div><textarea data-mprt="6" class="inputarea" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="Editor content;Press Alt+F1 for Accessibility Options." role="textbox" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-size: 1px; line-height: 19px; top: 190px; left: 64px; width: 1px; height: 1px;"></textarea><div style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px;"></div><div data-mprt="4" class="overlayWidgets" style="width: 900px;"><div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;"><div role="document"></div></div></div><div data-mprt="8" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 387px;"><div class="minimap-shadow-hidden" style="height: 387px;"></div><canvas width="1" height="483" style="position: absolute; left: 0px; width: 0.8px; height: 386.4px;"></canvas><div class="minimap-slider" style="position: absolute; will-change: transform; width: 0px;"><div class="minimap-slider-horizontal" style="position: absolute; width: 0px; height: 0px;"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="editor-widget suggest-widget" widgetid="editor.widget.suggestWidget" style="position: absolute; visibility: inherit; max-width: 1536px; top: 19px; left: 64px;" monaco-visible-content-widget="true"><div class="message" aria-hidden="true" style="display: none; background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69);"></div><div class="tree" aria-hidden="true" style="display: none; background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69);"><div class="monaco-list list_id_10" tabindex="0" role="tree"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-list-rows" style="overflow: hidden;"></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div></div></div><style type="text/css" media="screen">.monaco-list.list_id_10:focus .monaco-list-row.focused { background-color: #062f4a; }
+.monaco-list.list_id_10:focus .monaco-list-row.focused:hover { background-color: #062f4a; }
+.monaco-list.list_id_10:focus .monaco-list-row.selected { background-color: #084066; }
+.monaco-list.list_id_10:focus .monaco-list-row.selected:hover { background-color: #084066; }
+.monaco-list.list_id_10:focus .monaco-list-row.selected { color: #ffffff; }
+
+				.monaco-drag-image,
+				.monaco-list.list_id_10:focus .monaco-list-row.selected.focused { background-color: #094771; }
+			
+
+				.monaco-drag-image,
+				.monaco-list.list_id_10:focus .monaco-list-row.selected.focused { color: #ffffff; }
+			
+.monaco-list.list_id_10 .monaco-list-row.focused { background-color:  #062f4a; }
+.monaco-list.list_id_10 .monaco-list-row.focused:hover { background-color:  #062f4a; }
+.monaco-list.list_id_10 .monaco-list-row.selected { background-color:  #37373d; }
+.monaco-list.list_id_10 .monaco-list-row.selected:hover { background-color:  #37373d; }
+.monaco-list.list_id_10:not(.drop-target) .monaco-list-row:hover:not(.selected):not(.focused) { background-color:  #2a2d2e; }
+
+				.monaco-list.list_id_10.drop-target,
+				.monaco-list.list_id_10 .monaco-list-row.drop-target { background-color: #062f4a !important; color: inherit !important; }
+			
+.monaco-list-type-filter { background-color: #653723 }
+.monaco-list-type-filter { border: 1px solid rgba(0, 0, 0, 0); }
+.monaco-list-type-filter.no-matches { border: 1px solid #be1100; }
+.monaco-list-type-filter { box-shadow: 1px 1px 1px #000000; }</style></div></div><div class="details" aria-hidden="true" style="font-size: 14px; font-weight: normal; display: none; background-color: rgb(37, 37, 38); border-color: rgb(69, 69, 69);"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="body" style="overflow: hidden;"><div class="header"><span class="close" title="Read less... (Ctrl+Space)" style="height: 19px; width: 19px;"></span><p class="type" style="font-family: Consolas, &quot;Courier New&quot;, monospace;"></p></div><p class="docs"></p></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; will-change: transform;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; will-change: transform;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div></div><div class="context-view" aria-hidden="true" style="display: none;"></div></div></div><div class="pd-lr-lg pd-tb-sm position-absolute-br"><div id="codeBlockActionButtonHolder" class="flex-hbox flex-cross-center flex-main-end"><div><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined bg-white MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall" tabindex="0" type="button"><span class="MuiButton-label"><div class="flex-hbox"><div class="flex-auto mr-r-sm"><i class="fal fa-terminal"></i></div><div class="flex-auto">TRY IT</div></div></span><span class="MuiTouchRipple-root"></span></button></div><div class="pd-l-md"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeSmall MuiButton-sizeSmall" tabindex="0" type="button"><span class="MuiButton-label"><div class="flex-hbox"><div class="flex-auto mr-r-sm"><i class="fal fa-paper-plane"></i></div><div class="flex-auto">SUBMIT</div></div></span><span class="MuiTouchRipple-root"></span></button></div></div></div></div></div><span class="Resizer horizontal "></span><div class="Pane horizontal Pane2  " style="overflow-y: auto; flex: 1 1 0%; position: relative; outline: none;"><div id="outputPane" class="bg-white mh-fixed-300  scroll-v-auto" style="padding-bottom: 40px;"><div><div class="w-percent-100"><div class="jss243 bg-selected  position-relative paper-elevation-2  text-primary pd-lr-lg flex-hbox flex-cross-center text-upper font-caption" style="height: 40px;">Output</div></div><div><div class="pd-lr-lg pd-tb-md"><div class="mr-b-md"><div class="cde-light-list"><div class="cde-light-list-header font-small text-upper">Result</div><div class="cde-light-list-item"><div class="mr-b-sm"><pre style="white-space: pre-wrap;"><div>['Geoffrey Hinton', 'Andrew Ng', 'Sebastian Raschka', 'Yoshua Bengio', 'Hilary Mason', 'Carla Gentry', 'Corinna Cortes']</div><div>['Geoffrey Hinton', 'Andrew Ng', 'Sebastian Raschka', 'Yoshua Bengio', 'Hilary Mason', 'Carla Gentry', 'Corinna Cortes', 'Peter Warden']</div><div>['Geoffrey Hinton', 'Andrew Ng', 'Sebastian Raschka', 'Yoshua Bengio', 'Hilary Mason', 'Corinna Cortes', 'Peter Warden']</div><div>345</div><div>69.0</div><div>Andrew Ng</div><div>andrew</div><div>ng</div><div>ng andrew</div><div>NG ANDREW</div><div></div></pre></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="modalContainer"><div id="uAsDo" class=""><div></div></div></div></div><script>!function(i){function e(e){for(var t,r,n=e[0],o=e[1],a=e[2],c=0,u=[];c<n.length;c++)r=n[c],Object.prototype.hasOwnProperty.call(f,r)&&f[r]&&u.push(f[r][0]),f[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(i[t]=o[t]);for(d&&d(e);u.length;)u.shift()();return s.push.apply(s,a||[]),l()}function l(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var a=r[o];0!==f[a]&&(n=!1)}n&&(s.splice(t--,1),e=p(p.s=r[0]))}return e}var r={},f={17:0},s=[];function p(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return i[e].call(t.exports,t,t.exports,p),t.l=!0,t.exports}p.e=function(o){var e=[],r=f[o];if(0!==r)if(r)e.push(r[2]);else{var t=new Promise(function(e,t){r=f[o]=[e,t]});e.push(r[2]=t);var n,a=document.createElement("script");a.charset="utf-8",a.timeout=120,p.nc&&a.setAttribute("nonce",p.nc),a.src=p.p+"static/js/"+({5:"content",6:"launch",8:"Payments",9:"admin",10:"applicationWorkflow",11:"ecosystem",12:"inflow",13:"learn",14:"learnTeachOutline",15:"learner",18:"settings",19:"subscription",20:"teach"}[o]||o)+"."+{0:"89d1bfee",1:"d0be7993",2:"23009c26",3:"f2b15a32",4:"a998658b",5:"d7cfc1e2",6:"b8eb3123",7:"c90403ac",8:"40da740d",9:"99748b54",10:"0e7c86d2",11:"8ecdeadc",12:"1a429e4a",13:"90eed936",14:"02e4c79f",15:"aa443bc9",18:"ec9d12c2",19:"c0eeb71d",20:"f8e9b11d",22:"a660f321"}[o]+".chunk.js";var c=new Error;n=function(e){a.onerror=a.onload=null,clearTimeout(u);var t=f[o];if(0!==t){if(t){var r=e&&("load"===e.type?"missing":e.type),n=e&&e.target&&e.target.src;c.message="Loading chunk "+o+" failed.\n("+r+": "+n+")",c.name="ChunkLoadError",c.type=r,c.request=n,t[1](c)}f[o]=void 0}};var u=setTimeout(function(){n({type:"timeout",target:a})},12e4);a.onerror=a.onload=n,document.head.appendChild(a)}return Promise.all(e)},p.m=i,p.c=r,p.d=function(e,t,r){p.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},p.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},p.t=function(t,e){if(1&e&&(t=p(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(p.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)p.d(r,n,function(e){return t[e]}.bind(null,n));return r},p.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return p.d(t,"a",t),t},p.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},p.p="/",p.oe=function(e){throw console.error(e),e};var t=this["webpackJsonp@greyatom/cml-web-account"]=this["webpackJsonp@greyatom/cml-web-account"]||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var d=n;l()}([])</script><script src="./GreyAtom - Learning Platform_files/21.eea8458e.chunk.js.download"></script><script src="./GreyAtom - Learning Platform_files/main.87d17eca.chunk.js.download"></script><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./GreyAtom - Learning Platform_files/box-469cf41adb11dc78be68c1ae7f9457a4.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true" style="visibility: visible;">Accepting 'last_name' did insert the following text: last_name</div><div class="monaco-status" role="status" aria-atomic="true"></div></div></body></html>
